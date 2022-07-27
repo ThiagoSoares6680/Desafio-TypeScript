@@ -11,13 +11,14 @@ employee.name = "John";
 
 
 // Resolução 
-let employee = {
-    codigo: 10,
-    nome: "Jhon"
-};
 
-
-let employee2:{codigo:number, nome:string} = {
-    codigo: 10,
-    nome: 'Jhow'
+interface employee{
+    code: number,
+    name: string,
 }
+
+let IEployee: employee = {
+    code: 10,
+    name: 'jhow'
+}
+

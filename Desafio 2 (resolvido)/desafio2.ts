@@ -26,33 +26,25 @@ let pessoa4 = {
 
 // Resolução
 
-interface pessoa1{
-    nome:string,
-    idade:number,
-    profissao:string
+enum tdProfissoes{
+    atriz,
+    padeiro,
 }
 
-let pessoa1 = {
-    nome : "maria",
-    idade : 29,
-    profissao : "atriz"
-};
-
-const pessoa2:{nome:string, idade: number, profissao:string} = {
-    nome : "roberto",
-    idade : 19,
-    profissao : "Padeiro",
+class humano{
+    nome:string;
+    idade:number;
+    profissao:tdProfissoes
+    constructor(nome:string, idade:number, profissao:tdProfissoes){
+        this.nome = nome,
+        this.idade = idade,
+        this.profissao = profissao
+    }
 }
 
-let pessoa3 = {
-    nome: "laura",
-    idade: "32",
-    profissao: "Atriz"
-};
+let pessoa1 = new humano('maria', 29, tdProfissoes.atriz);
+let pessoa2 = new humano('roberto', 19,tdProfissoes.padeiro);
+let pessoa3 = new humano('laura', 32, tdProfissoes.atriz);
+let pessoa4 = new humano('carlos', 19, tdProfissoes.padeiro)
 
 
-let pessoa4:pessoa1 = {
-    nome : "carlos",
-    idade : 19,
-    profissao : "padeiro"
-}
